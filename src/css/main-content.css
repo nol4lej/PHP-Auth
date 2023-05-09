@@ -1,6 +1,22 @@
-/* .container_principal{
-    border: 1px solid red;
+.container_principal{
+    /* color: rgb(195, 195, 195); */
     padding: 30px;
-    margin: 20px 20px 0 250px;
-    width: calc(100% - 250px);
-} */
+    /* width: calc(100% - 250px); */
+
+}
+
+.last_publications{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #222840;
+}
+
+.last_publications > h2{
+    text-align: center;
+}
+
+.last_publications_table{
+    border-radius: 10px;
+    padding: 10px;
+    border: 3px solid rgb(255, 255, 255, 0.03);
+}
