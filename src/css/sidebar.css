@@ -1,6 +1,5 @@
 /*
 .header{
-    
     padding: 20px 0 20px 0;
     width: 100%;
     text-align: center;
@@ -14,16 +13,45 @@
 } */
 
 .sidebar{
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    background-color: #00081b;
     color: #fff;
+    /* height: 100vh; */
 }
 
 .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #001d60;
     text-align: center;
     padding: 15px;
     font-size: 20px;
+}
+
+.menu_button{
+    background-color: transparent;
+    border: none;
+}
+
+.menu_button > svg{
+    height: 30px;
+    width: 30px;
+}
+
+.menu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 65px;
+    padding: 15px;
+    width: 40%;
+    height: 100vh;
+    background-color: #00081b;
+}
+
+.nav_menu{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }

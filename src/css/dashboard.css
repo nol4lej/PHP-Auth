@@ -8,8 +8,13 @@ a{
     text-decoration: none;
 }
 
+button{
+    cursor: pointer;
+}
+
 .container{
     display: flex;
     flex-direction: column;
+    background-color: aqua;
 }
 
