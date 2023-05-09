@@ -1,0 +1,6 @@
+.container_principal{
+    border: 1px solid red;
+    padding: 50px 0 50px 0;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
