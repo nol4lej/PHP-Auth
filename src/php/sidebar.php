@@ -13,9 +13,9 @@
             <span>Dashboard</span>
         </header>
         <main class="menu">
-            <div class>
+            <nav class>
                 <a href="">Home</a>
-            </div>
+            </nav>
         </main>
     </aside>
 

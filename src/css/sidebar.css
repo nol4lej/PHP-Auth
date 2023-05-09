@@ -1,21 +1,9 @@
-.sidebar{
-    position: absolute;
-    width: 200px;
-    height: 100%;
-    padding: 10px;
-    background-color: #00081b;
-    border-right: 1px solid #c5c5c5;
-    color: #fff;
-}
-
+/*
 .header{
-    background-color: #001d60;
-    border: 1px solid #001442;
-    margin-top: 20px;
+    
     padding: 20px 0 20px 0;
     width: 100%;
     text-align: center;
-    border-radius: 10px;
     font-size: 30px;
 }
 
@@ -23,4 +11,19 @@
     margin-top: 20px;
     padding: 10px;
     border: 1px solid red;
+} */
+
+.sidebar{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    background-color: #00081b;
+    color: #fff;
+}
+
+.header{
+    background-color: #001d60;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
 }

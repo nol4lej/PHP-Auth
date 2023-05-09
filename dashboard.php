@@ -8,12 +8,16 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <?php
-    // incluir el archivo sidebar.php
-    include 'src/php/sidebar.php';
 
-    // incluir el archivo main-content.php
-    include 'src/php/main-content.php';
-    ?>
+    <main class="container">
+        <?php
+        // incluir el archivo sidebar.php
+        include 'src/php/sidebar.php';
+
+        // incluir el archivo main-content.php
+        include 'src/php/main-content.php';
+        ?>
+    </main>
+
 </body>
 </html>
