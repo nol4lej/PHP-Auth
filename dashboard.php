@@ -39,7 +39,7 @@
             <?php
                 // Se utiliza la función isset() para comprobar si el parámetro GET page está definido en la URL. La función isset() devuelve true si la variable está definida y false si no lo está.
                 // Si el parámetro GET page está definido en la URL, se asigna su valor a la variable $page utilizando el operador ternario ? :. Si no está definido, se asigna el valor predeterminado 'main-content'.
-                $page = isset($_GET['page']) ? $_GET['page'] : 'main_dashboard';
+                $page = isset($_GET['page']) ? $_GET['page'] : 'content_dashboard';
                 // El nombre del archivo se construye dinámicamente utilizando la variable $page. Por ejemplo, si el valor de $page es 'about', se incluirá el archivo about.php.
                 include "$page.php";
             ?>
