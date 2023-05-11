@@ -27,8 +27,11 @@ button{
     cursor: pointer;
 }
 
+ul{
+    list-style-type: none;
+}
+
 .container{
     display: flex;
     flex-direction: column;
 }
-

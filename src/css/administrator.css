@@ -1,0 +1,71 @@
+.administrator_principal{
+    gap: 10px;
+    padding: 30px;
+}
+
+.datatable_container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: #222840;
+    box-sizing: border-box;
+}
+
+.header_tools{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid #505874;
+}
+
+.tools{
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.tools > li > button{
+    background: none;
+    border: none;
+}
+
+.datatable_scroll{
+    overflow-x: auto;
+}
+
+.datatable{
+    width: 100%;
+    border-collapse: collapse;  /* para eliminar los espacios entre las celdas */
+}
+
+.datatable_posts{
+    text-align: center;
+}
+
+.datatable_posts > tr > td{
+    white-space: nowrap; /* se evita que el contenido de la celda se envuelva a la siguiente línea y se ajuste automáticamente al ancho de la celda */
+    padding: 10px;
+    border-bottom: 1px solid #505874;
+}
+
+.footer_tools{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.pages{
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    /* justify-content: space-around; */
+}
+
+.pages button{
+    color: #fff;
+    background: transparent;
+    border: none;
+}
