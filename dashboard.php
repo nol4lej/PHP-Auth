@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckbox.io/ckbox/1.5.0/ckbox.js"></script>
 
     <link rel="stylesheet" href="/src/css/dashboard.css">
     <link rel="stylesheet" href="/src/css/sidebar.css">
+    <link rel="stylesheet" href="/src/css/contenedor_editor.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -41,6 +44,9 @@
                 include "$page.php";
             ?>
         </div>
+        <div class="contenedor_editor" id="contenedor_editor">
+            <div id="editor"></div>
+        </div>
     </main>
 
 </body>
@@ -48,5 +54,6 @@
 <script src="/src/js/navbar.js"></script>
 <script src="/src/js/controlador_links.js"></script>
 <script src="/src/js/wysiwyg.js"></script>
+<script src="/src/js/modal_editor.js"></script>
 
 </html>

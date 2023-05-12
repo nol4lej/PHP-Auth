@@ -6,8 +6,8 @@
             <div class="tools_container">
                 <ul class="tools">
                     <li><input type="checkbox" name="" id=""></li>
-                    <li><button type="button" name="create_post" onclick="doFetch(event)">
-                            <i name="create_post" class="material-icons">add_circle</i>
+                    <li><button type="button" onclick="modalEditor()">
+                            <i class="material-icons">add_circle</i>
                         </button>
                     </li>
                     <li><button>
