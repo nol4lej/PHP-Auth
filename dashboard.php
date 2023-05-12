@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
-    <script src="https://cdn.ckbox.io/ckbox/1.5.0/ckbox.js"></script>
+    
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/decoupled-document/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/translations/es.js"></script>
 
     <link rel="stylesheet" href="/src/css/dashboard.css">
     <link rel="stylesheet" href="/src/css/sidebar.css">
@@ -45,7 +46,34 @@
             ?>
         </div>
         <div class="contenedor_editor" id="contenedor_editor">
-            <div id="editor"></div>
+            <div class="post_form">
+                <form action="" method="POST" enctype="multipart/form-data"> <!-- agregamos un enctype="multipart/form-data" al formulario ya que incluimos un campo de imagen -->
+                <!-- // ! PHP captura el contenido del atributo "name" del elemento input -->
+                    <div class="contenido_inputs">
+                        <label for="titulo">Titulo:</label>
+                        <input type="text" id="titulo" name="titulo">
+                        <label for="fecha_publicacion">Fecha de publicacion:</label>
+                        <input type="date" id="fecha_publicacion" name="fecha_publicacion"> <!-- Utilizamos el valor "date" en el atributo type para indicar que se agregara una fecha -->
+                        <label for="categoria">Categoria:</label>
+                        <input type="text" id="categoria" name="categoria">
+                        <label for="imagen">Imagen:</label>
+                        <input type="file" id="imagen" name="imagen"> <!-- Utilizamos el valor "file" en el atributo type para indicar que se agregara un archivo-->
+                    </div>
+
+                    <div class="document-editor">
+                        <div class="document-editor__toolbar">
+                        </div>
+                        <div class="document-editor__editable-container">
+                            <div class="document-editor__editable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons_editor">
+                        <button type="submit" class="">Publicar</button>
+                        <button>Cancelar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 

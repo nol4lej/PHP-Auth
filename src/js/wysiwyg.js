@@ -1,12 +1,17 @@
-ClassicEditor.create( document.querySelector( '#editor' ), {
-    ckbox: {
-        tokenUrl: 'https://97601.cke-cs.com/token/dev/x2gqxwqar6GLf7DfLzw1cRdlpxkcaIpJilyb?limit=10',
-    },
-    toolbar: [
-        'ckbox', 'imageUpload', '|', 'heading', '|', 'undo', 'redo', '|', 'bold', 'italic', '|',
-        'blockQuote', 'indent', 'link', '|', 'bulletedList', 'numberedList'
-    ],
-} )
-.catch( error => {
-    console.error( error );
-} );
+DecoupledEditor
+    .create( document.querySelector( '.document-editor__editable' ), {
+        cloudServices: {
+            // A configuration of CKEditor Cloud Services.
+            // ...
+        }
+    } )
+    .then( editor => {
+        const toolbarContainer = document.querySelector( '.document-editor__toolbar' );
+
+        toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+
+        window.editor = editor;
+    } )
+    .catch( err => {
+        console.error( err );
+    } );

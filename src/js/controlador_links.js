@@ -1,11 +1,17 @@
 function doFetch(event){
+    let contenedor_contenido = document.getElementById("content");
     let target = event.target.name;
-    console.log(target);
+    if(target){ // Creado para cerrar el modal editor si es que se cambia de pagina
+      const contenedor = document.getElementById("contenedor_editor");
+      contenedor_contenido.style.display = "block";
+      contenedor.style.display = "none";
+    }
     event.preventDefault() // Prevenir que se recargue la página al hacer click
     fetch(`${target}.php`) // Posteriormente el valor de la variable page será utilizado en dashboard.php
         .then(respuesta => respuesta.text()) // Convertir la respuesta en texto.
         .then(html => {
-            document.getElementById("content").innerHTML = html;
+            // document.getElementById("content").innerHTML = html;
+            contenedor_contenido.innerHTML = html
             history.pushState({}, "", `dashboard.php?page=${target}`); //el método pushState() actualiza la URL del navegador sin recargar la página.
           })
         .catch(error => console.error(error)); // Manejar errores

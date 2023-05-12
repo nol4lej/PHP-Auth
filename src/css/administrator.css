@@ -31,12 +31,22 @@
     justify-content: start;
     gap: 10px;
     list-style-type: none;
+    align-items: center;
 }
 
 .tools > li > button{
     background: none;
     border: none;
+    margin-top: 2.5px;
 }
+
+.tools > li > button > i{
+    color: #fff;
+}   
+
+.tools input{
+    transform: scale(1.5);
+} 
 
 .search{
     width: 100%;

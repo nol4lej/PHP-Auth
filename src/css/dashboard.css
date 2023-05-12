@@ -2,12 +2,7 @@ body{
     margin: 0;
     font-family: 'Merriweather Sans', sans-serif;
     font-weight: 700;
-    color: rgb(255, 255, 255, 1);
     background-color: #131727
-}
-
-p{
-    color: rgb(255, 255, 255, 0.6);
 }
 
 a{
@@ -27,11 +22,12 @@ button{
     cursor: pointer;
 }
 
-ul{
+/* ul{
     list-style-type: none;
-}
+} */
 
 .container{
     display: flex;
     flex-direction: column;
 }
+
