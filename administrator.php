@@ -1,14 +1,13 @@
 <link rel="stylesheet" href="/src/css/administrator.css">
+<script src="/src/js/controlador_links.js"></script>
 <main class="administrator_principal">
     <div class="datatable_container">
         <div class="header_tools">
             <div class="tools_container">
                 <ul class="tools">
                     <li><input type="checkbox" name="" id=""></li>
-                    <li><button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                            </svg>
+                    <li><button type="button" name="create_post" onclick="doFetch(event)">
+                            <i name="create_post" class="material-icons">add_circle</i>
                         </button>
                     </li>
                     <li><button>
@@ -32,14 +31,14 @@
                 </ul>
             </div>
             <div class="search">
-                <input type="text">
+                <input type="text" placeholder="Buscador">
             </div>
         </div>
 
         <div class="datatable_scroll">
             <table class="datatable">
-                <thead>
-                    <tr class="">
+                <thead class="datatable_header">
+                    <tr>
                         <th></th>
                         <th>Status</th>
                         <th>ID</th>
