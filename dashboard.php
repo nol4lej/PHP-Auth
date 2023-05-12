@@ -47,7 +47,7 @@
         </div>
         <div class="contenedor_editor" id="contenedor_editor">
             <div class="post_form">
-                <form action="" method="POST" enctype="multipart/form-data"> <!-- agregamos un enctype="multipart/form-data" al formulario ya que incluimos un campo de imagen -->
+                <form id="crear_post_form" action="/src/php/crear_post.php" method="POST" enctype="multipart/form-data"> <!-- agregamos un enctype="multipart/form-data" al formulario ya que incluimos un campo de imagen -->
                 <!-- // ! PHP captura el contenido del atributo "name" del elemento input -->
                     <div class="contenido_inputs">
                         <label for="titulo">Titulo:</label>
@@ -58,13 +58,15 @@
                         <input type="text" id="categoria" name="categoria">
                         <label for="imagen">Imagen:</label>
                         <input type="file" id="imagen" name="imagen"> <!-- Utilizamos el valor "file" en el atributo type para indicar que se agregara un archivo-->
+                        <input type="hidden" name="fecha_actual" value="<?php echo date('Y-m-d H:i:s'); ?>"> <!-- obtiene la fecha actual -->
+                        <textarea type="hidden" name="contenido"></textarea>
                     </div>
 
                     <div class="document-editor">
                         <div class="document-editor__toolbar">
                         </div>
                         <div class="document-editor__editable-container">
-                            <div class="document-editor__editable">
+                            <div class="document-editor__editable" id="document-editor__editable">
                             </div>
                         </div>
                     </div>

@@ -5,9 +5,9 @@
     $password = "";
     $database = "blog";
 
-    $conexion = mysqli_connect($host, $user, $password, $database);
+    $conn = mysqli_connect($host, $user, $password, $database);
 
-    if(!$conexion){
+    if(!$conn){
         die("Error al conectar: " . mysqli_connect_error());
     }
 
