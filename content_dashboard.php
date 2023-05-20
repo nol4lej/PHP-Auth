@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/src/css/content_dashboard.css">
+<link rel="stylesheet" href="../dashboard_blog/src/css/content_dashboard.css">
 <main class="container_principal">
     <div class="last_publications">
         <h2>Últimos comentarios</h2>

@@ -36,7 +36,8 @@
         VALUES ('$titulo', '$contenido', '$fecha_actual', '$categoria', '$ruta_sql')";
 
     if(mysqli_query($conn, $sql)){
-        echo "Artículo publicado correctamente";
+        header("Location: http://localhost/dashboard.php?page=administrator");
+        exit();
     } else {
         echo "Error al publicar el artículo: " . mysqli_error($conn);
     }

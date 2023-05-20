@@ -9,9 +9,9 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/decoupled-document/ckeditor.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/translations/es.js"></script>
 
-    <link rel="stylesheet" href="/src/css/dashboard.css">
-    <link rel="stylesheet" href="/src/css/sidebar.css">
-    <link rel="stylesheet" href="/src/css/contenedor_editor.css">
+    <link rel="stylesheet" href="../dashboard_blog/src/css/dashboard.css">
+    <link rel="stylesheet" href="../dashboard_blog/src/css/sidebar.css">
+    <link rel="stylesheet" href="../dashboard_blog/src/css/contenedor_editor.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -81,9 +81,9 @@
 
 </body>
 
-<script src="/src/js/navbar.js"></script>
-<script src="/src/js/controlador_links.js"></script>
-<script src="/src/js/wysiwyg.js"></script>
-<script src="/src/js/modal_editor.js"></script>
+<script src="../dashboard_blog/src/js/navbar.js"></script>
+<script src="../dashboard_blog/src/js/controlador_links.js"></script>
+<script src="../dashboard_blog/src/js/wysiwyg.js"></script>
+<script src="../dashboard_blog/src/js/modal_editor.js"></script>
 
 </html>

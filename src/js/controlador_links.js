@@ -1,6 +1,6 @@
 function doFetch(event){
     let contenedor_contenido = document.getElementById("content");
-    let target = event.target.name;
+    let target = event.target.name; //Obtiene el valor del atributo name del boton que se a clickeado
     if(target){ // Creado para cerrar el modal editor si es que se cambia de pagina
       const contenedor = document.getElementById("contenedor_editor");
       contenedor_contenido.style.display = "block";

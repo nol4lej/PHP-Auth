@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/src/css/administrator.css">
-<script src="/src/js/controlador_links.js"></script>
+<link rel="stylesheet" href="../dashboard_blog/src/css/administrator.css">
+<script src="../dashboard_blog/src/js/controlador_links.js"></script>
 <main class="administrator_principal">
     <div class="datatable_container">
         <div class="header_tools">
@@ -42,34 +42,7 @@
                         <th>Vistas</th>
                     </tr>
                 </thead>
-                <tbody class="datatable_posts">
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td></td>
-                        <td>1</td>
-                        <td>Primera publicacion</td>
-                        <td>01/01/01</td>
-                        <td>Noticia</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td></td>
-                        <td>1</td>
-                        <td>Primera publicacion</td>
-                        <td>01/01/01</td>
-                        <td>Noticia</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td></td>
-                        <td>1</td>
-                        <td>Primera publicacion</td>
-                        <td>01/01/01</td>
-                        <td>Noticia</td>
-                        <td>1</td>
-                    </tr>
+                <tbody class="datatable_posts" id="datatable_posts">
                 </tbody>
             </table>
         </div>
@@ -96,3 +69,4 @@
         </div>
     </div>
 </main>
+<script src="../dashboard_blog/src/js/tabla_posts.js"></script>

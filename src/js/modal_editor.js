@@ -1,7 +1,6 @@
 const contenedor = document.getElementById("contenedor_editor")
 const contenedor_contenido = document.getElementById("content")
 
-
 function modalEditor(){
     if(contenedor.style.display === "flex"){
         contenedor.style.display = "none";
