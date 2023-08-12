@@ -48,7 +48,9 @@ if(!empty($_POST["btn-login"])){
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 
             if($result){
-
+                header("location: ./views/userpanel.view.php"); //redirige a userpanel
+            } else {
+                throw new Exception("Credenciales incorrectas.");
             }
 
 
@@ -58,8 +60,11 @@ if(!empty($_POST["btn-login"])){
             // var_dump($result);
     
     
+        } catch (PDOException $error) {
+            // Manejar errores de PDO aquí
+            echo "Error de PDO: " . $error->getMessage();
         } catch (Exception $error) {
-            echo $error;
+            echo $error->getMessage();
         }
     
         // TÉCNICA DE CONSULTAS SEPARADAS PARA PREVENIR INYECCIÓN SQL

@@ -14,7 +14,6 @@ function getConnection(){
         // PDO::ERRMODE_EXCEPTION configura PDO para que lance excepciones en caso de error, lanzará una excepción "PDOException".
         $connectionPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
         // ---- CONEXION TRADICIONAL ----:
         // $connection = new mysqli($host, $username, $password, $dbname);
         // if ($connection->connect_error) {
@@ -23,8 +22,10 @@ function getConnection(){
 
         return $connectionPDO;
 
-    } catch (PDOException $error) {
-        echo $error->getMessage();
+    } catch (PDOException $pdoException) {
+        throw new Exception("Error en la conexión a la base de datos: " . $pdoException->getMessage());
+    } catch (Exception $genericException) {
+        throw new Exception("Error general: " . $genericException->getMessage());
     }
 }
 
