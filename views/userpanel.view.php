@@ -8,6 +8,14 @@
 <body>
     
     Panel
+    <?php require "../controllers/session.controller.php";?>
+
+    <p>Nombre de usuario: 
+        <?php 
+            $user = $session->getSession();
+            echo $user["name"]; 
+        ?>
+    </p>
 
 </body>
 </html>

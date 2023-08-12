@@ -12,7 +12,7 @@ if(!empty($_POST["btn-login"])){
     
         try {
 
-            // APLICANDO TÉCNICA DE CONSULTAS PREPARADAS:
+            // TÉCNICA DE CONSULTAS PREPARADAS:
             // Se utilizan para prevenir ataques de inyección SQL al manipular datos ingresados por los usuarios. 
             // Las consultas preparadas separan los datos de la consulta SQL, evitando la concatenación directa de valores 
             // en las consultas y permitiendo que el motor de base de datos maneje de manera segura los datos ingresados.
@@ -48,6 +48,12 @@ if(!empty($_POST["btn-login"])){
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 
             if($result){
+
+                require "session.controller.php";
+
+                // $session= new HandleSessions();
+                $session->setNewSession($result);
+
                 header("location: ./views/userpanel.view.php"); //redirige a userpanel
             } else {
                 throw new Exception("Credenciales incorrectas.");
@@ -60,18 +66,10 @@ if(!empty($_POST["btn-login"])){
             // var_dump($result);
     
     
-        } catch (PDOException $error) {
-            // Manejar errores de PDO aquí
-            echo "Error de PDO: " . $error->getMessage();
         } catch (Exception $error) {
             echo $error->getMessage();
         }
-    
-        // TÉCNICA DE CONSULTAS SEPARADAS PARA PREVENIR INYECCIÓN SQL
-        // Las consultas preparadas separan los datos de la consulta SQL, evitando la concatenación directa de valores en las consultas y permitiendo que el motor de base de datos maneje de manera segura los datos ingresados.
-    
-    
-    
+
     } else {
         echo "campos vacios";
     }
