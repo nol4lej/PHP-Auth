@@ -2,10 +2,17 @@
 
 class HandleSessions{
 
-    // public static $currentSession;
+    private static $instance;
 
-    public function __construct(){
+    private function __construct(){
         session_start();
+    }
+
+    public static function getInstance(){
+        if(!self::$instance){
+            self::$instance = new self();
+        }
+        return self::$instance;
     }
 
     public function setExpireTime(){
@@ -15,7 +22,6 @@ class HandleSessions{
 
     public function setNewSession($result){
         $_SESSION["user_data"] = $result;
-        // HandleSessions::$currentSession = $_SESSION["user_data"];
         $this->setExpireTime();
     }
 
@@ -23,8 +29,29 @@ class HandleSessions{
         return $_SESSION["user_data"]; // <- de esta manera se accede a una propiedad static
     }
 
+    public function verifyIfSession(){
+        if(isset($_SESSION["user_data"])){
+            header("location: ../views/userpanel.view.php"); //redirige a userpanel
+        } else {
+            return false;
+        }
+    }
+
+    public function verifyNoSession(){
+        if(!isset($_SESSION["user_data"])){
+            header("location: ../index.php");
+        }
+    }
+
+    public function logout(){
+        session_unset(); // Eliminar los datos de la sesión
+        session_destroy(); // Cerrar la sesión
+        header("location: ../index.php");
+    }
+
 }
 
-$session = new HandleSessions()
+$handleSessions = HandleSessions::getInstance(); // Obtiene la instancia única
+
 
 ?>

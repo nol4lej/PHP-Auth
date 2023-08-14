@@ -8,7 +8,10 @@
 </head>
 <body>
     
-    
+    <?php 
+        require_once "./controllers/session.controller.php";
+        $handleSessions->verifyIfSession();
+    ?>
 
     <main class="main">
         <div class="main__container">

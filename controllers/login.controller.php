@@ -49,12 +49,10 @@ if(!empty($_POST["btn-login"])){
 
             if($result){
 
-                require "session.controller.php";
+                require_once "session.controller.php";
+                $handleSessions->setNewSession($result);
+                $handleSessions->verifyIfSession();
 
-                // $session= new HandleSessions();
-                $session->setNewSession($result);
-
-                header("location: ./views/userpanel.view.php"); //redirige a userpanel
             } else {
                 throw new Exception("Credenciales incorrectas.");
             }
