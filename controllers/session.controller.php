@@ -2,12 +2,17 @@
 
 class HandleSessions{
 
+    // Propiedad en donde se almacena la instancia unica del patron singleton.
     private static $instance;
 
     private function __construct(){
         session_start();
     }
 
+    // creando el Patron Singleton
+    // es un patrón de diseño creacional en la programación que se utiliza para garantizar que una clase tenga una única instancia y proporcionar un punto global de acceso a esa instancia.
+    // Los patrones de diseño creacionales se centran en cómo crear instancias de objetos, gestionar su creación y controlar su ciclo de vida.
+    // En otras palabras, se ocupan de la forma en que los objetos son instanciados y organizados dentro de una aplicación.
     public static function getInstance(){
         if(!self::$instance){
             self::$instance = new self();
